@@ -175,6 +175,8 @@ PLATFORMS
   x86_64-darwin-21
 
 DEPENDENCIES
+  actiontext
+  activestorage
   annotate
   bcrypt
   better_errors
