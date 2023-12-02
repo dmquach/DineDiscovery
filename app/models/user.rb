@@ -5,8 +5,8 @@ class User < ApplicationRecord
       uniqueness: true,
       length: { in: 3..100 },
       format: { with: URI::MailTo::EMAIL_REGEXP }
-    validates :first_name, presence: true, uniqueness: true, length: { in: 2..40 }
-    validates :last_name, presence: true, uniqueness: true, length: { in: 2..40 }
+    validates :first_name, presence: true, length: { in: 2..40 }
+    validates :last_name, presence: true, length: { in: 2..40 }
 
     validates :zip_code, presence: true, format: { with: /\A\d{5}\z/, message: "should be in the format 12345" }
 
