@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+# m = User.new(email: "hello@gmail.com", first_name: "Dylan", last_name: "Qu", zip_code: 95121, password: "hellol")
+
+puts "Destroying tables..."
+# Unnecessary if using `rails db:seed:replant`
+User.destroy_all
+
+puts "Resetting primary keys..."
+# For easy testing, so that after seeding, the first `User` has `id` of 1
+ApplicationRecord.connection.reset_pk_sequence!('users')
+
+puts "Creating users..."
+# Create one user with an easy to remember username, email, and password:
+User.create!(
+  username: 'Demo-lition',
+  email: 'demo@user.io',
+  password: 'password'
+)
