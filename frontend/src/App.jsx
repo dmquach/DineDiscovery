@@ -1,33 +1,47 @@
-import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { Outlet, createBrowserRouter, RouterProvider } from 'react-router-dom';
+import LoginForm from './components/Session/LoginForm';
+import SignupForm from './components/Session/SignupForm';
+import Navigation from './components/Navigation';
+import * as sessionActions from './store/session';
 
-import Home from './components/Home';
-import TeaIndex from "./components/TeaIndex";
-import NewUserForm from './components/NewUserForm';
-import NewSessionForm from './components/NewSessionForm';
+function Layout() {
+  const dispatch = useDispatch();
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    dispatch(sessionActions.restoreSession()).then(() => {
+      setIsLoaded(true)
+    });
+  }, [dispatch]);
+
+  return (
+    <>
+      <Navigation />
+      {isLoaded && <Outlet />}
+    </>
+  );
+}
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Home />,
+    element: <Layout />,
     children: [
       {
-        index: true,
-        element: <TeaIndex />
-      },
-      {
-        path: 'signup',
-        element: <NewUserForm />
+        path: '/',
+        element: <h1>Welcome!</h1>
       },
       {
         path: 'login',
-        element: <NewSessionForm />
+        element: <LoginForm />
+      },
+      {
+        path: 'signup',
+        element: <SignupForm />
       }
     ]
   },
-  {
-    path: '*',
-    element: <Navigate to={'/'} />
-  }
 ]);
 
 const App = () => {
