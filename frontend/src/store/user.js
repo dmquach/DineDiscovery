@@ -1,50 +1,25 @@
-// // import { postUser } from "../utils/user_api_utils";
+import csrfFetch, { restoreCSRF } from "./csrf";
 
-// // Type Constants
-// export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
-// export const REMOVE_CURRENT_USER = 'REMOVE_CURRENT_USER';
+export const RECEIVE_USERS = "users/user";
 
-// // Action Creators
-// export const receiveCurrentUser = user => ({
-//   type: RECEIVE_CURRENT_USER,
-//   user
-// });
+export const receiveUsers = (users) => ({
+  type: RECEIVE_USERS,
+  users,
+});
 
-// export const removeCurrentUser = userId => ({
-//   type: REMOVE_CURRENT_USER,
-//   userId
-// });
+export const fetchUsers = () => async (dispatch) => {
+  const res = await csrfFetch("/api/users");
+  const data = await res.json();
+  dispatch(receiveUsers(data));
+};
 
-// // Thunk Action Creators
-// export const createUser = user => async dispatch => {
-//   const res = await postUser(user);
-//   let data;
-//   if (res.ok) {
-//     data = await res.json();
-//     sessionStorage.setItem('currentUser', JSON.stringify(data.user));
-//     return dispatch(receiveCurrentUser(data.user));
-//   } else {
-//     data = await res.json();
-//     throw data;
-//   }
-// };
+const userReducer = (oldState = {}, action) => {
+  switch (action.type) {
+    case RECEIVE_USERS:
+      return { ...oldState, ...action.users };
+    default:
+      return oldState;
+  }
+};
 
-// // Selectors
-
-// // Reducer
-// const userReducer = (state ={}, action) => {
-//   const nextState = Object.assign(state);
-
-//   switch (action.type) {
-//     case RECEIVE_CURRENT_USER:
-//       nextState[action.user.id] = action.user;
-//       return nextState;
-//     case REMOVE_CURRENT_USER:
-//       delete nextState[action.userId];
-//       return nextState;
-//     default:
-//       return state;
-//   }
-// };
-
-// export default userReducer;
+export default userReducer;

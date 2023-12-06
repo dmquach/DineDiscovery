@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-
-import configureStore from './store';
+import { BrowserRouter } from "react-router-dom";
+import configureStore from './store/store';
 // import { createUser } from './store/user.js';
-import { csrfFetch, restoreCSRF } from './store/csrf';
+import csrfFetch, { restoreCSRF } from "./store/csrf";
 // import { loginUser, logoutUser } from './store/session.js';
 import App from './App';
 import './index.css';
