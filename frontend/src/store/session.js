@@ -1,5 +1,5 @@
 import csrfFetch, { restoreCSRF } from "./csrf";
-
+// useLoction()
 const SET_USER = 'session/setUser';
 const REMOVE_USER = 'session/removeUser';
 
