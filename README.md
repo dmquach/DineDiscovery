@@ -6,8 +6,33 @@ Live Link: https://dinediscover.onrender.com/
 
 DineDiscover is an online platform designed for users to explore restaurants, share reviews, and access ratings effortlessly. The inspiration behind DineDiscover stemmed from a passion for food and a love for dining out. The goal is to provide a user-friendly website that simplifies the process of discovering exciting new restaurants. As a dedicated food enthusiast, I aimed to create a space where people can easily find their ideal dining spot and share their culinary experiences.
 
-### Tech Stack
+### Components
 
+# Reviews
+DineDiscover users can easily share their dining experiences by writing reviews with ratings and multiple pictures. The latest reviews will appear on the front page, and if a user has already written a review for a restaurant, it will show up at the top of the review section for convenience.
+
+```js
+//handling image files
+const handleFiles = ({ currentTarget }) => {
+  const files = currentTarget.files;
+
+  setImageFiles(files);
+  if (files.length !== 0) {
+    let filesLoaded = 0;
+    const urls = [];
+    Array.from(files).forEach((file, index) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+      fileReader.onload = () => {
+        urls[index] = fileReader.result;
+
+        if (++filesLoaded === files.length) setImageUrls(urls);
+      };
+    });
+  } else setImageUrls([]);
+};
+```
+### Tech Stack
 - JavaScript, HTML, Ruby, and CSS for coding languages
 - React, Redux for frontend
 - Ruby on Rails for backend
@@ -15,3 +40,7 @@ DineDiscover is an online platform designed for users to explore restaurants, sh
 - [AWS S3](https://aws.amazon.com/) to store and render every photo in this app
 - [Render](https://render.com/) to host this app online
 - [FontAwesome](https://fontawesome.com/) for icons used on Roominate
+
+### Future Implementations
+- Adding Price Ranges to restaurants as another way to filter
+- Adding GoogleMaps API as a way to find the location of the restaurant
