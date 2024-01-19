@@ -1,4 +1,4 @@
-# WelcomeTO DineDiscover
+# Welcome to DineDiscover
 
 Live Link: https://dinediscover.onrender.com/
 
@@ -32,6 +32,53 @@ const handleFiles = ({ currentTarget }) => {
   } else setImageUrls([]);
 };
 ```
+
+# Rating
+
+DineDiscover user leaves a rating for a restaurant, DineDiscover automatically updates the restaurant's overall rating to reflect the new feedback. This ensures that users have access to the most accurate and up-to-date restaurant ratings possible.
+
+```javascript
+//Star rating component
+{
+  [...Array(5)].map((star, i) => {
+    i += 1;
+    return (
+      <button
+        key={i + 99}
+        className={i <= rating ? "on" : "off"}
+        onMouseEnter={() => setRating(i)}
+        onMouseLeave={() => setHover(rating)}
+      >
+        <i className="fa-solid fa-star"></i>
+      </button>
+    );
+  });
+}
+```
+
+```ruby
+#when reviews is deleted it updates the restaurant's ratings
+ def destroy
+    @review = Review.find(params[:id])
+    @business = Business.find(@review.business_id)
+    @review.destroy
+    @business.update_average_rating
+    render "/api/businesses/show"
+  end
+```
+
+```ruby
+#when review is successfully saved it updates the restaurant's rating
+
+    if @review.save
+      @review.business.update_average_rating
+      render :create
+    else
+      render json: @review.errors.full_messages, status: 422
+    end
+  end
+```
+
 ### Tech Stack
 - JavaScript, HTML, Ruby, and CSS for coding languages
 - React, Redux for frontend
