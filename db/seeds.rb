@@ -81,4 +81,13 @@ disnee = User.create!(
   password: 'password'
 )
 
+tester = User.create!(
+  email: 'disnee@example.com',
+  first_name: 'Tester',
+  last_name: 'name',
+  zip_code: '98765',
+  birthday: Date.new(1980, 3, 18),
+  password: 'password'
+)
+
 puts "Done!"
