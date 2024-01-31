@@ -6,6 +6,8 @@ Live Link: https://dinediscover.onrender.com/
 
 DineDiscover is an online platform designed for users to explore restaurants, share reviews, and access ratings effortlessly. The inspiration behind DineDiscover stemmed from a passion for food and a love for dining out. The goal is to provide a user-friendly website that simplifies the process of discovering exciting new restaurants. As a dedicated food enthusiast, I aimed to create a space where people can easily find their ideal dining spot and share their culinary experiences.
 
+> ![How It looks](/app/assets/images/dine.gif)
+
 ### Components
 
 # Reviews
@@ -87,6 +89,11 @@ DineDiscover user leaves a rating for a restaurant, DineDiscover automatically u
 - [AWS S3](https://aws.amazon.com/) to store and render every photo in this app
 - [Render](https://render.com/) to host this app online
 - [FontAwesome](https://fontawesome.com/) for icons used on Roominate
+
+### Highlights!
+
+## Searching
+The search function can be done through a search bar or through a dropdown menu of premade options
 
 ### Future Implementations
 - Adding Price Ranges to restaurants as another way to filter
