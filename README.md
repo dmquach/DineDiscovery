@@ -95,6 +95,8 @@ DineDiscover user leaves a rating for a restaurant, DineDiscover automatically u
 ## Searching
 The search function can be done through a search bar or through a dropdown menu of premade options
 
+> ![Searching](/app/assets/images/search.gif)
+
 ### Future Implementations
 - Adding Price Ranges to restaurants as another way to filter
 - Adding GoogleMaps API as a way to find the location of the restaurant
