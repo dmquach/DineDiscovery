@@ -82,10 +82,10 @@ DineDiscover user leaves a rating for a restaurant, DineDiscover automatically u
 ```
 
 ### Tech Stack
-- JavaScript, HTML, Ruby, and CSS for coding languages
-- React, Redux for frontend
-- Ruby on Rails for backend
-- PostgreSQL as database
+- JavaScript, HTML, Ruby, and CSS coding languages
+- [React](https://react.dev/), [Redux](https://react-redux.js.org/) for frontend
+- [Ruby on Rails](https://rubyonrails.org/) for backend
+- [PostgreSQL](https://www.postgresql.org/) as database
 - [AWS S3](https://aws.amazon.com/) to store and render every photo in this app
 - [Render](https://render.com/) to host this app online
 - [FontAwesome](https://fontawesome.com/) for icons used on Roominate
