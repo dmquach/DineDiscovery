@@ -1,7 +1,4 @@
-// import { useLoadScript } from "@react-google-maps/api";
-// import { useEffect, useState } from "react";
 import "./business.css";
-// import BizGMap from "../Map/Marker";
 const BizLocation = ({ business }) => {
 
 
