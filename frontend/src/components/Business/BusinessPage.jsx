@@ -9,10 +9,7 @@ import CommentSections from "./CommentSections";
 import WriteAReviewButton from "./WriteAReviewButton";
 import MyComments from "./MyComments";
 import EditReviewButton from "./EditReviewButton.js";
-// import { Link } from "react-router-dom";
 import Loading from "../Utils/Loading";
-// import ContactMe from "./ContactMe";
-// import ProjectCard from "./ProjectCard";
 
 const BusinessPage = () => {
   const dispatch = useDispatch();

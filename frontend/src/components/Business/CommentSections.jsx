@@ -2,10 +2,6 @@ import { useEffect } from "react";
 import "./business.css";
 import FixedStarRating from "../StarRating/FixedStarRating";
 const CommentSections = ({ review }) => {
-
-
-
-// debugger
   useEffect(()=>{},[review])
     if (review === undefined || review === null || review.length === 0) {
       return null;
@@ -26,7 +22,6 @@ const CommentSections = ({ review }) => {
                 height: "60px",
                 borderRadius: "50%",
                 border:"1px solid rgba(0,0,0,0.2)"
-                // boxShadow: "1px 2px 5px rgba(0, 0, 0, 0.5)",
              }}></div>
           ) : (
             <i className="fa-solid fa-user" />
