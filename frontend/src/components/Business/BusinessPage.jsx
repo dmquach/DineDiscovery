@@ -6,7 +6,7 @@ import BizImageHolder from "./BizImageholder";
 import "./business.css";
 import BizLocation from "./BizLocation";
 import CommentSections from "./CommentSections";
-import WriteAReviewButton from "./WriteAReviewButton";
+import ReviewButton from "./ReviewButton.jsx";
 import MyComments from "./MyComments";
 import EditReviewButton from "./EditReviewButton.js";
 import Loading from "../Utils/Loading";
@@ -49,7 +49,7 @@ const BusinessPage = () => {
               myReview={myReview}
             />
           ) : (
-            <WriteAReviewButton business={business[id]} id={id} />
+            <ReviewButton business={business[id]} id={id} />
           )}
 
           <BizLocation business={business[id]} />

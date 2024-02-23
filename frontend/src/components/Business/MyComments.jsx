@@ -1,10 +1,7 @@
-
-// import { useParams } from "react-router-dom"
 import FixedStarRating from "../StarRating/FixedStarRating";
 import CommentDropDown from "./CommentDropDown";
 import "./business.css";
 const MyComments = ({ review, business, bizId, myReview }) => {
-  // const { id } = useParams();
 
   return (
     <>
