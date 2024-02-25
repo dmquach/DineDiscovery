@@ -1,11 +1,9 @@
-// import { Modal } from "../../Context/Modal";
 import "./DeleteImageWarning.css";
 const DeleteImageWarningModal = ({
   handleDelete,
   setDeleteImage,
   currentIndex,
-  // deletedAlert,
-  // setDeleteAlert,
+
 }) => {
   return (
     <>
