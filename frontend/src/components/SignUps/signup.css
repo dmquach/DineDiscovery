@@ -1,0 +1,239 @@
+:root {
+  --red: #e00707;
+  --linkBlue: #0073bb;
+  --white: white;
+  --gray: gray;
+  --inputWidth: 18.25rem;
+  --inputHeight: 1.8rem;
+  --formWidth: 18.75rem;
+  --formHeight: 19.5rem;
+  --login-H1-Size: 1.375rem;
+  --login-H1-Weight: 450;
+}
+
+.signupForm-wrapper {
+  width: var(--formWidth);
+  /* border:1px solid black; */
+  margin: auto;
+  display: flex;
+  width: var(--formWidth);
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.signupForm {
+  /* border:1px solid red; */
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 100%;
+}
+
+.input {
+  width: var(--inputWidth);
+  height: var(--inputHeight);
+  border-radius: 3px;
+  border: 1px solid var(--gray);
+  padding-left: 5px;
+}
+
+.nameInputHolder {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.name {
+  width: 138px;
+}
+
+.inputHolder {
+  height: 320px;
+  /*
+    border: 1px solid black; */
+  margin: auto;
+  display: flex;
+  width: var(--formWidth);
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.birthdaySelect {
+  display: flex;
+  align-items: center;
+}
+.birthdaySelect h4 {
+  font-size: 14px;
+  font-weight: var(--login-H1-Weight);
+  margin-right: 0.313px;
+}
+
+.birthdaySelect span {
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  color: gray;
+}
+
+.birthdayMonthDayYear {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.birthdayMonthDayYear * {
+  width: 30%;
+  height: var(--inputHeight);
+  padding-left: 5px;
+  border-radius: 3px;
+}
+.birthdayMonthDayYear *:focus {
+  outline: none;
+  border: 1px solid rgba(0, 68, 255, 0.686);
+  box-shadow: 1px 0px 3px rgba(0, 68, 255, 0.483);
+}
+.input:focus {
+  outline: none;
+  border: 1px solid rgba(0, 68, 255, 0.686);
+  box-shadow: 1px 0px 3px rgba(0, 68, 255, 0.483);
+}
+
+.inputHolder button {
+  width: 100%;
+  height: 2.634rem;
+  color: white;
+  background-color: var(--red);
+  border: none;
+  border-radius: 0.125rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.inputHolder button:hover {
+  opacity: 0.8;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.error {
+display: flex;
+  flex-direction: column;
+width:100%;
+  height: 100%;
+  min-height: 48px;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  /* position: relative; */
+  margin-bottom: 24px;
+
+  z-index: 2;
+
+
+}
+.error li {
+  font-size: 14px;
+  width: 100%;
+  min-height: 40px;
+  max-height: 100%;
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+  /* border-radius: 5px; */
+
+
+}
+
+
+    .Background {
+      background-size: cover;
+      background-position: center;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      position: relative;
+      margin-top:10px;
+      margin-bottom:10px;
+
+    }
+.centered {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.preview_profile{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.profile_button{
+
+
+  background-color: #0073bb;
+  color:white;
+  margin-top:10px;
+  margin-bottom:10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor:pointer;
+  width: 100%;
+    height: 2.634rem;
+    border: none;
+    border-radius: 0.125rem;
+    font-weight: 500;
+    font-size: 1rem;
+    padding-left: 10px;
+      padding-right: 10px;
+}
+
+.profile_image_button{
+    background-color: #0073bb;
+      color: white;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      width: 100%;
+      height: 2.634rem;
+      border: none;
+      border-radius: 0.125rem;
+      font-weight: 500;
+      font-size: 1rem;
+
+}
+.profile_button:hover{
+    background-color: #0093ee;
+    transition:all 0.3s
+}
+.deleteExit {
+  position: absolute;
+  right: 10%;
+  top: 5px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #ebebebbe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.deleteExit:hover {
+  background-color: #fa0101;
+  color: white;
+  transition: all 0.3s;
+}
