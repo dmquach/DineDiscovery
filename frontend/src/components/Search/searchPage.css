@@ -72,3 +72,78 @@
 .invalidSearchTerm {
   font-style: italic;
 }
+
+.searchPageWrapper {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchPageWrapper h1 {
+  margin: 15px;
+}
+
+.searchCardsHolder {
+  display: flex;
+  flex-direction: column;
+  width: 45rem;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: scroll;
+  align-items: center;
+  /* margin:auto; */
+  /* justify-content: space-evenly; */
+}
+
+.searchCardsHolder h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.searchCardsHolder::-webkit-scrollbar {
+  display: none;
+}
+.googleMap {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(243, 237, 229, 0.566);
+}
+
+.noResult {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+
+}
+
+.noResult h1 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom:1rem;
+}
+
+
+.noResult ul li h2{
+  font-size: 18px;
+  font-weight:500;
+    color: rgba(0, 0, 0, 0.8)
+}
+
+.noResult ul li{
+  margin:16px;
+  color:rgba(0,0,0,0.7)
+}
+.invalidSearchTerm {
+  font-style: italic;
+}
