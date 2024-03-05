@@ -3,7 +3,7 @@ import * as sessionActions from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, Redirect } from "react-router-dom";
 import "./LoginForm.css";
-import DemoLogin from "../DemoLogin/DemoLogin";
+import DemoLogin from "./DemoLogin";
 
 const LoginFormPage = () => {
   const dispatch = useDispatch();
@@ -96,7 +96,6 @@ const LoginFormPage = () => {
               required
             />
           </label>
-          {/* <span>Forgot password?</span> */}
           <button type="submit">Log In</button>
           <DemoLogin className="demo" string="Demo Login" />
         </div>

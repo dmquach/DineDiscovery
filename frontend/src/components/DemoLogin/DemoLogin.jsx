@@ -6,7 +6,7 @@ const DemoLogin=({className,string})=>{
 
     const handleClick=(e)=>{
         e.preventDefault()
-        return dispatch(sessionActions.login({ credential: "demo@demo.com",password:"123456" }));
+        return dispatch(sessionActions.login({ credential: "demo@demo.com", password:"123456" }));
     }
     return(
         <span onClick={handleClick} className={`${className}`}>{string}</span>
