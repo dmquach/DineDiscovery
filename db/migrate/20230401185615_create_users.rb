@@ -4,10 +4,9 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.string :email, null: false
       t.string :first_name, null: false
       t.string :last_name, null: false
-      t.string :zip_code, null: false
-      t.date :birthday
       t.string :password_digest, null: false
       t.string :session_token, null: false
+
       t.timestamps
     end
     add_index :users, :email, unique: true
