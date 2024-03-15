@@ -6,7 +6,7 @@ import { receiveReview } from "../../store/review";
 import { useLocation } from "react-router-dom";
 import "./reviewPage.css";
 import csrfFetch from "../../store/csrf";
-import { Modal } from "../../Context/Modal";
+import { Modal } from "../../context/Modal";
 import UploadImage from "./uploadImage";
 import ReviewErrorModal from "./ReviewErrorModal";
 import Alert from "./showAlert";

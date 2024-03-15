@@ -1,7 +1,7 @@
 import { useState } from "react";
 import FixedStarRating from "../StarRating/FixedStarRating";
 import "./business.css";
-import { Modal } from "../../Context/Modal";
+import { Modal } from "../../context/Modal";
 import ImageModal from "./ImageModal";
 
 const BizImageHolder = ({ business, reviews }) => {

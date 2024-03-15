@@ -12,7 +12,7 @@ import Post from "./components/Post/post";
 // import ReviewEditPage from "./components/ReviewEditPage/ReviewEditPage";
 import Home from "./components/Map/Map";
 import MapMarker from "./components/Map/Marker";
-import { ModalProvider } from "./Context/Modal";
+import { ModalProvider } from "./context/Modal";
 
 import { useEffect } from "react";
 // import AboutDev from "./components/Dev/AboutDev";
@@ -53,7 +53,6 @@ function App() {
               <ReviewPage />
             </Route>
             <Route exact path="/edit/:review">
-              {/* <ReviewEditPage /> */}
               <ReviewPage />
             </Route>
             <Route exact path="/business/:id">
