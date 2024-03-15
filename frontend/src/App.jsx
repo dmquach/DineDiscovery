@@ -62,7 +62,16 @@ function App() {
             <Route exact path="/posts">
               <Post />
             </Route>
+            <Route exact path="/maps">
+              <Home />
+            </Route>
+            <Route exact path="/marker">
+              <MapMarker />
+            </Route>
 
+            <Route exact path="/:notFound">
+              <NotFound />
+            </Route>
           </Switch>
         <Footer/>
       </ModalProvider>
