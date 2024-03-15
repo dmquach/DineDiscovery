@@ -1,53 +1,72 @@
-import { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { Outlet, createBrowserRouter, RouterProvider } from 'react-router-dom';
-import LoginForm from './components/Session/LoginForm';
-import SignupForm from './components/Session/SignupForm';
-import Navigation from './components/Navigation';
-import * as sessionActions from './store/session';
+import React from "react";
+import { Route, Switch, useLocation } from "react-router-dom";
+import LoginFormPage from "./components/LoginFormPage/LoginFormPage";
+import SignupFormPage from "./components/SignupFormPage/SignupFormPage";
+import Navigation from "./components/Navigation";
+import "./index.css";
+import Homepage from "./components/Homepage/homepage";
+import SearchResult from "./components/SearchResult/SearchResult";
+import ReviewPage from "./components/ReviewPage/ReviewPage";
+import BusinessPage from "./components/Business/BusinessPage";
+import Post from "./components/Post/post";
+// import ReviewEditPage from "./components/ReviewEditPage/ReviewEditPage";
+import Home from "./components/Map/Map";
+import MapMarker from "./components/Map/Marker";
+import { ModalProvider } from "./Context/Modal";
 
-function Layout() {
-  const dispatch = useDispatch();
-  const [isLoaded, setIsLoaded] = useState(false);
+import { useEffect } from "react";
+// import AboutDev from "./components/Dev/AboutDev";
+import NotFound from "./components/Utils/NotFound";
+import Footer from "./components/Footer/Footer";
+function App() {
+  const location = useLocation()
+// const url = location.pathname;
+
 
   useEffect(() => {
-    dispatch(sessionActions.restoreSession()).then(() => {
-      setIsLoaded(true)
-    });
-  }, [dispatch]);
-
+    window.scrollTo(0, 0); // Scroll to top on component mount
+  }, [location]);
   return (
     <>
-      <Navigation />
-      {isLoaded && <Outlet />}
+      <ModalProvider>
+        {location.pathname !== "/" && (
+          <div className="navWrapper">
+            <Navigation />
+          </div>
+        )}
+
+          <Route exact path="/">
+            <Homepage />
+          </Route>
+
+          <Switch>
+            <Route exact path="/login">
+              <LoginFormPage />
+            </Route>
+            <Route exact path="/signup">
+              <SignupFormPage />
+            </Route>
+            <Route exact path="/search/:searchTerm">
+              <SearchResult />
+            </Route>
+            <Route exact path="/review/:review">
+              <ReviewPage />
+            </Route>
+            <Route exact path="/edit/:review">
+              {/* <ReviewEditPage /> */}
+              <ReviewPage />
+            </Route>
+            <Route exact path="/business/:id">
+              <BusinessPage />
+            </Route>
+            <Route exact path="/posts">
+              <Post />
+            </Route>
+
+          </Switch>
+        <Footer/>
+      </ModalProvider>
     </>
   );
 }
-
-const router = createBrowserRouter([
-  {
-    element: <Layout />,
-    children: [
-      {
-        path: '/',
-        element: <h1>Welcome!</h1>
-      },
-      {
-        path: 'login',
-        element: <LoginForm />
-      },
-      {
-        path: 'signup',
-        element: <SignupForm />
-      }
-    ]
-  },
-]);
-
-const App = () => {
-  return (
-    <RouterProvider router={router} />
-  );
-}
-
 export default App;
