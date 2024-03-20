@@ -1,0 +1,14 @@
+
+.profile-wrapper{
+    position:relative;
+    width:100%;
+}
+.userIcon{
+
+    align-self: flex-start;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* background-color: #f3f3f3; */
+}
