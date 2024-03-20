@@ -5,7 +5,7 @@ import * as sessionActions from "../../store/session";
 import "./signup.css";
 import SignupHeader from "./SignupHeader";
 import { useRef } from "react";
-import { Modal } from "../../Context/Modal";
+import { Modal } from "../../context/Modal";
 import { NavLink } from "react-router-dom/cjs/react-router-dom";
 import DemoLogin from "../DemoLogin/DemoLogin";
 // import { useEffect } from "react";
