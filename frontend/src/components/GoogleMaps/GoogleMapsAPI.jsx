@@ -29,3 +29,10 @@ export default function GMap({ business }) {
     googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY,
     libraries: place,
   });
+
+  if (!isLoaded) return <div>Loading...</div>;
+
+  const center = getCenter(business);
+
+  return <Map business={business} center={center} />;
+}
