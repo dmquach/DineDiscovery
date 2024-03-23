@@ -53,6 +53,15 @@ function Map({ center, business }) {
     return () => document.removeEventListener("click", closeMenu);
   }, [show]);
 
-  
+    useEffect(() => {
+    setSelectedBusiness(null);
+  }, [business]);
+
+  if (!business) {
+    return null;
+  }
+
+
+
 
 }
