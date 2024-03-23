@@ -23,3 +23,9 @@ function getCenter(business) {
   const { lat, lng } = bounds.getCenter().toJSON();
   return { lat, lng };
 }
+
+export default function GMap({ business }) {
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY,
+    libraries: place,
+  });
