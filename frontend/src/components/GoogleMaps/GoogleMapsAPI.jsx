@@ -36,3 +36,23 @@ export default function GMap({ business }) {
 
   return <Map business={business} center={center} />;
 }
+
+function Map({ center, business }) {
+  const [show, setShow] = useState(false);
+  const [selectedBusiness, setSelectedBusiness] = useState(null);
+
+  useEffect(() => {
+    if (!show) return;
+
+    const closeMenu = () => {
+      setShow(false);
+    };
+
+    document.addEventListener("click", closeMenu);
+
+    return () => document.removeEventListener("click", closeMenu);
+  }, [show]);
+
+  
+
+}
