@@ -1,6 +1,6 @@
 import "./starRating.css";
 
-const FixedStarRating = ({ rating,styles }) => {
+const StarRating = ({ rating,styles }) => {
 
   return (
 
@@ -17,4 +17,4 @@ const FixedStarRating = ({ rating,styles }) => {
   );
 };
 
-export default FixedStarRating;
+export default StarRating;
