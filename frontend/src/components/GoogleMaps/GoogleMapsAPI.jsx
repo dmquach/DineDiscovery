@@ -61,6 +61,31 @@ function Map({ center, business }) {
     return null;
   }
 
+  const markers = [];
+  Object.values(business).forEach((biz, i) => {
+    let location = { lat: biz.lat, lng: biz.lng };
+    markers.push({
+      position: location,
+      name: biz.name,
+      category: biz.category,
+      photo: biz.photo,
+      rating: biz.rating,
+      id: biz.id,
+    });
+  });
+
+  const handleMarkerClick = (business) => {
+    setSelectedBusiness(business);
+  };
+
+  return (
+    <>
+
+    </>
+  );
+}
+
+
 
 
 
