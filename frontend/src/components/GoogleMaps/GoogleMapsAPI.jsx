@@ -84,9 +84,3 @@ function Map({ center, business }) {
     </>
   );
 }
-
-
-
-
-
-}
