@@ -23,7 +23,7 @@ const LoginFormPage = () => {
         try {
           data = await res.clone().json();
         } catch {
-          // data = await res.text();
+
         }
 
         if (data?.errors) {
