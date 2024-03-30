@@ -17,6 +17,13 @@ import { Link } from "react-router-dom";
             {business?.photo ? (
               <div
                 className="bizPic"
+                style={{
+                  backgroundImage: `url(${business?.photo})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  width: "250px",
+                  height: "200px",
+                }}
               />
             ) : (
               "no picture"
