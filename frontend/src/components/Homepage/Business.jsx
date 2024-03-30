@@ -9,6 +9,13 @@ const Business = ({user}) => {
   const dispatch = useDispatch();
   const businesses = useSelector((state) => Object.values(state.business));
 
+  useEffect(() => {
+    dispatch(fetchUnreviewedBusiness());
+  }, [dispatch,]);
+
+  if (businesses === undefined || businesses === null || businesses.length === 0) {
+    return null;
+  }
 
   return (
     <>  </>
