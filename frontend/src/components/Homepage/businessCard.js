@@ -35,9 +35,9 @@ import { Link } from "react-router-dom";
                 <h1>{business.name}</h1>
               </Link>
             </li>
-            <li></li>
+            <li>Do you recommend this business?</li>
             <li>
-              
+              <StarRating business={business} businessId={business.id} />
             </li>
           </ul>
         </div>
