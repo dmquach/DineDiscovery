@@ -29,6 +29,17 @@ import { Link } from "react-router-dom";
               "no picture"
             )}
           </div>
+          <ul className="businessCardInfo">
+            <li className="businessName">
+              <Link to={`business/${business.id}`}>
+                <h1>{business.name}</h1>
+              </Link>
+            </li>
+            <li></li>
+            <li>
+              
+            </li>
+          </ul>
         </div>
       );
 
