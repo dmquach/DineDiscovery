@@ -30,6 +30,18 @@ const MainSlider=()=>{
       <div>
         <div>
           <Navigation />
+          <div>
+            <h1>
+              DineDiscovery
+              <i
+                className="fa-brands fa-yelp"
+                style={{ fontSize: "90px", color: "Red" }}
+              ></i>
+            </h1>
+            <h1 className="mainImgHeader subHeader">
+              Discover Your Favorite Places!
+            </h1>
+          </div>
         </div>
       </div>
     );
