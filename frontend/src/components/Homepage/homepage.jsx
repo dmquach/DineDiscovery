@@ -1,4 +1,4 @@
-import MainSlider from "./MainSlider"
+import MainSlider from "./mainSlider"
 import Business from "./Business"
 // import * as sessionActions from "../../store/session";
 import { useSelector } from "react-redux";
