@@ -27,11 +27,19 @@ const MainSlider=()=>{
  }, [urlIndex, imageUrls.length]);
 
     return (
-      <div>
-        <div>
+      <div
+        className="slider"
+        style={{
+          backgroundImage: `url(${imageUrls[urlIndex]})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="dark">
           <Navigation />
-          <div>
-            <h1>
+          <div className="mainHeadingDiv">
+            <h1 className="mainImgHeader">
+              {" "}
               DineDiscovery
               <i
                 className="fa-brands fa-yelp"
