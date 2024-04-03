@@ -13,4 +13,15 @@ const ReviewCard = ({ review }) => {
     AOS.refresh();
   }, []);
 
+  if (!review) {
+    return null;
+  }
+
+
+  return (<div>
+    placeholderr
+  </div>) :
+  );
 }
+
+export default ReviewCard;
