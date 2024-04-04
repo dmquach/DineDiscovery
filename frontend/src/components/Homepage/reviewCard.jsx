@@ -18,10 +18,14 @@ const ReviewCard = ({ review }) => {
   }
 
 
-  return (<div>
-    placeholderr
-  </div>) :
-  );
+  return (
+    {review?.userAvatar ? (
+
+    ) : (
+      <i className="fa-solid fa-user profilePicture"></i>
+    )
+    }
+  )
 }
 
 export default ReviewCard;
