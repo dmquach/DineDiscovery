@@ -21,9 +21,17 @@ const ReviewCard = ({ review }) => {
   return (
     <div>
       {review?.userAvatar ? (
-        <div
-          className="userProfilePicURL"
-        ></div>
+            <div
+            style={{
+              backgroundImage: `url(${review.userAvatar})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              width: "30px",
+              height: "300px",
+              borderRadius: "50%",
+              border: "1px solid rgba(0,0,0,0.2)",
+            }}
+          ></div>
       ) : (
         <i className="fa-solid fa-user profilePicture"></i>
       )}
