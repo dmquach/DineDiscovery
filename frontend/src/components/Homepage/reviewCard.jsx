@@ -20,13 +20,17 @@ const ReviewCard = ({ review }) => {
 
   return (
     <div>
-    {review?.userAvatar ? (
-      <div
-        className="userProfilePicURL"
-      ></div>
-    ) : (
-      <i className="fa-solid fa-user profilePicture"></i>
-    )}
+      {review?.userAvatar ? (
+        <div
+          className="userProfilePicURL"
+        ></div>
+      ) : (
+        <i className="fa-solid fa-user profilePicture"></i>
+      )}
+
+      <h1>{review.firstName} {review.lastName[0]}.</h1>
+
+      
     </div>
   );
 }
