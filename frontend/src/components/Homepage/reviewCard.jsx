@@ -46,6 +46,13 @@ const ReviewCard = ({ review }) => {
           ></li>
         )}
 
+        <Link to={`/business/${review.businessId}`}>
+
+        <FixedStarRating
+          rating={review.rating}
+          styles={{ marginLeft: "12px" }}
+        />
+
     </div>
   );
 }
