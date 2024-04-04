@@ -19,15 +19,15 @@ const ReviewCard = ({ review }) => {
 
 
   return (
-    <div>
+    <div className="reviewCardHolder">
       {review?.userAvatar ? (
             <div
             style={{
               backgroundImage: `url(${review.userAvatar})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
-              width: "30px",
-              height: "300px",
+              width: "40px",
+              height: "40px",
               borderRadius: "50%",
               border: "1px solid rgba(0,0,0,0.2)",
             }}
@@ -37,7 +37,6 @@ const ReviewCard = ({ review }) => {
       )}
 
       <h1>{review.firstName} {review.lastName[0]}.</h1>
-
       {review?.imageUrls[0] !== undefined ? (
             <li
             style={{
