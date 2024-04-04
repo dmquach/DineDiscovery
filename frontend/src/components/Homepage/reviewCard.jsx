@@ -19,13 +19,16 @@ const ReviewCard = ({ review }) => {
 
 
   return (
+    <div>
     {review?.userAvatar ? (
-
+      <div
+        className="userProfilePicURL"
+      ></div>
     ) : (
       <i className="fa-solid fa-user profilePicture"></i>
-    )
-    }
-  )
+    )}
+    </div>
+  );
 }
 
 export default ReviewCard;
