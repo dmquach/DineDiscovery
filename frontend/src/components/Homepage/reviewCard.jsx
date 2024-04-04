@@ -38,6 +38,12 @@ const ReviewCard = ({ review }) => {
             }}
           ></li>
         ) : (
+          <li
+            style={{
+              backgroundImage: ``,
+              backgroundSize: "cover",
+            }}
+          ></li>
         )}
 
     </div>
