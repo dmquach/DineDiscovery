@@ -31,9 +31,13 @@ const ReviewCard = ({ review }) => {
       <h1>{review.firstName} {review.lastName[0]}.</h1>
 
       {review?.imageUrls[0] !== undefined ? (
-
+            <li
+            style={{
+              backgroundImage: `url(${review.imageUrls[0]})`,
+              backgroundSize: "cover",
+            }}
+          ></li>
         ) : (
-
         )}
 
     </div>
