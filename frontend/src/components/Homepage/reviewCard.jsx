@@ -58,7 +58,9 @@ const ReviewCard = ({ review }) => {
           rating={review.rating}
           styles={{ marginLeft: "12px" }}
         />
-
+       <li>
+          <p>{review.body}</p>
+        </li>
     </div>
   );
 }
