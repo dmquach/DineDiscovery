@@ -19,7 +19,8 @@ const ReviewCard = ({ review }) => {
 
 
   return (
-    <div className="reviewCardHolder">
+    <div className="reviewCardHolder" data-aos="fade-up" data-aos-offset="300">
+      <ul className="cardUl">
       {review?.userAvatar ? (
             <div
             style={{
@@ -68,6 +69,7 @@ const ReviewCard = ({ review }) => {
        <li>
           <p>{review.body}</p>
         </li>
+        </ul>
     </div>
   );
 }
