@@ -8,3 +8,16 @@
     /* padding: 10px; */
     width: 300px;
 }
+
+.reviewCardHolder ul {
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.profileHolder {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+}
