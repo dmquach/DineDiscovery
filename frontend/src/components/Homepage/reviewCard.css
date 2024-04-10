@@ -14,8 +14,19 @@
   justify-content: space-evenly;
 }
 
+.reviewWrapper {
+}
+
 .profileHolder {
   display: flex;
   align-items: center;
   margin-left: 12px;
+}
+
+.profilePicture {
+
+}
+
+.profileHolder {
+
 }
