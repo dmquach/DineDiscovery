@@ -21,23 +21,25 @@ const ReviewCard = ({ review }) => {
   return (
     <div className="reviewCardHolder" data-aos="fade-up" data-aos-offset="300">
       <ul className="cardUl">
-      {review?.userAvatar ? (
-            <div
-            style={{
-              backgroundImage: `url(${review.userAvatar})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              width: "40px",
-              height: "40px",
-              borderRadius: "50%",
-              border: "1px solid rgba(0,0,0,0.2)",
-            }}
-          ></div>
-      ) : (
-        <i className="fa-solid fa-user profilePicture"></i>
-      )}
+        <li className="profileHolder">
+          {review?.userAvatar ? (
+                <div
+                style={{
+                  backgroundImage: `url(${review.userAvatar})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  width: "40px",
+                  height: "40px",
+                  borderRadius: "50%",
+                  border: "1px solid rgba(0,0,0,0.2)",
+                }}
+              ></div>
+          ) : (
+            <i className="fa-solid fa-user profilePicture"></i>
+          )}
 
-      <h1>{review.firstName} {review.lastName[0]}.</h1>
+          <h1>{review.firstName} {review.lastName[0]}.</h1>
+        </li>
       {review?.imageUrls[0] !== undefined ? (
             <li
             style={{
