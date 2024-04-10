@@ -41,14 +41,14 @@ const ReviewCard = ({ review }) => {
           <h1>{review.firstName} {review.lastName[0]}.</h1>
         </li>
       {review?.imageUrls[0] !== undefined ? (
-            <li
+          <li className="reviewPicture"
             style={{
               backgroundImage: `url(${review.imageUrls[0]})`,
               backgroundSize: "cover",
             }}
           ></li>
         ) : (
-          <li
+          <li className="reviewPicture"
             style={{
               backgroundImage: ``,
               backgroundSize: "cover",
@@ -68,7 +68,7 @@ const ReviewCard = ({ review }) => {
           rating={review.rating}
           styles={{ marginLeft: "12px" }}
         />
-       <li>
+       <li className="reviewBody">
           <p>{review.body}</p>
         </li>
         </ul>
