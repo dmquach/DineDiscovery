@@ -79,3 +79,8 @@
 .reviewBody::-webkit-scrollbar {
   display: none;
 }
+
+.reviewBody p {
+  margin-left: 9px;
+  margin-right: 9px;
+}
