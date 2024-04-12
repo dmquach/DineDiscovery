@@ -24,9 +24,18 @@
 }
 
 .profilePicture {
-
+  background-color: rgba(0,0,0,0.1);
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 .profileHolder {
-
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
 }
