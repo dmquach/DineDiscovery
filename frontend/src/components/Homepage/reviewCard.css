@@ -15,6 +15,10 @@
 }
 
 .reviewWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
 }
 
 .profileHolder {
@@ -38,4 +42,9 @@
   display: flex;
   align-items: center;
   margin-left: 15px;
+}
+
+.bizName{
+  color:rgba(2, 122, 151, 1);
+  font-weight: 500;
 }
