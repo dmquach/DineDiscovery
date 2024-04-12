@@ -68,3 +68,11 @@
   margin-top:50px;
   margin-bottom: 50px;
 }
+
+.reviewBody {
+
+}
+
+.reviewBody::-webkit-scrollbar {
+  display: none;
+}
