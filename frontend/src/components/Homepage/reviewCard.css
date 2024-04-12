@@ -29,8 +29,8 @@
 
 .profilePicture {
   background-color: rgba(0,0,0,0.1);
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -41,10 +41,22 @@
 .profileHolder {
   display: flex;
   align-items: center;
-  margin-left: 15px;
+  margin-left: 13px;
+}
+.profileHolder h1{
+  margin-left: 10px;
 }
 
 .bizName{
   color:rgba(2, 122, 151, 1);
   font-weight: 500;
+}
+
+.reviewPicture {
+  height: 150px;
+  background-color: rgba(250, 235, 215, 0.43);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
 }
