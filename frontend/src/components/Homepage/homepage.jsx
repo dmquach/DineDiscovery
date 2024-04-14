@@ -2,7 +2,7 @@ import MainSlider from "./mainSlider"
 import Business from "./Business"
 // import * as sessionActions from "../../store/session";
 import { useSelector } from "react-redux";
-import Reviews from "./Reviews";
+import Reviews from "./reviews";
 
 // import React, { useRef, useState } from "react";
 
