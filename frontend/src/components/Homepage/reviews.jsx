@@ -17,6 +17,17 @@ const Reviews = () => {
     dispatch(fetchLatestReviews()).then(() => setIsLoading(false));
   }, [dispatch]);
 
+  return (
+    <>
+      <h1>Recent Activity</h1>
+      <div>
+        {reviews.map((review, i) => (
+          <ReviewCard key={`review_${i}`} review={review} />
+        ))}
+      </div>
+    </>
+  );
+
 }
 
 export default Reviews;
