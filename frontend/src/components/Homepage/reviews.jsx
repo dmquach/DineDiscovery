@@ -19,15 +19,14 @@ const Reviews = () => {
 
   return (
     <>
-      <h1>Recent Activity</h1>
-      <div>
+      <h1 className="header">Recent Activity</h1>
+      <div className="reviewWrapper">
         {reviews.map((review, i) => (
           <ReviewCard key={`review_${i}`} review={review} />
         ))}
       </div>
     </>
   );
-
 }
 
 export default Reviews;
