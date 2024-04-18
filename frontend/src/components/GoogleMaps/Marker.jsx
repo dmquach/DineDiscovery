@@ -20,11 +20,11 @@ export default function BizGMap({ business, class_name }) {
 }
 
 function Map({ business }) {
-  // const center = useMemo(
-  //   () => ({ lat: business.lat, lng: business.lng }),
-  //   [business]
-  // );
-  // const [selected, setSelected] = useState(null);
+  const center = useMemo(
+    () => ({ lat: business.lat, lng: business.lng }),
+    [business]
+  );
+  const [selected, setSelected] = useState(null);
 
   return (
     <>
