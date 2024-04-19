@@ -9,4 +9,8 @@ function Post() {
     };
     fetchPosts();
   }, []);
+
+  useEffect(() => {
+    if (newPost) setPosts((prevPosts) => [newPost, ...prevPosts]);
+  }, [newPost]);
 }
