@@ -13,4 +13,11 @@ function Post() {
   useEffect(() => {
     if (newPost) setPosts((prevPosts) => [newPost, ...prevPosts]);
   }, [newPost]);
+
+  return (
+    <>
+      <h1>Page</h1>
+
+    </>
+  );
 }
