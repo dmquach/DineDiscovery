@@ -18,6 +18,19 @@ function PostForm({setNewPost}) {
     }
   }
 
+  const response = await fetch("/api/posts", {
+        method: "POST",
+        body: formData,
+      });
+      if (response.ok) {
+        const post = await response.json();
+        setTitle("");
+        setPhotoFile(null);
+        setNewPost(post);
+      }
+      setTitle("");
+    };
+
   return (
       <form onSubmit={handleSubmit}>
       <input
@@ -27,6 +40,8 @@ function PostForm({setNewPost}) {
         onChange={handleInput}
         required
       />
+
+      <button>Make a new Post!</button>
     </form>
   );
 }
