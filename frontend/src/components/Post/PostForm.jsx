@@ -17,6 +17,18 @@ function PostForm({setNewPost}) {
       formData.append("post[photo]", photoFile);
     }
   }
+
+  return (
+      <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        id="post-title"
+        value={title}
+        onChange={handleInput}
+        required
+      />
+    </form>
+  );
 }
 
 export default PostForm;
