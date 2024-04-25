@@ -4,6 +4,10 @@ function PostForm({setNewPost}) {
   const [title, setTitle] = useState("");
   const [photoFile, setPhotoFile] = useState(null);
 
+  const [imageFiles, setImageFiles] = useState([]);
+  const [imageUrls, setImageUrls] = useState([]);
+
+
   const handleInput = (e) => {
   setTitle(e.currentTarget.value);
   };
