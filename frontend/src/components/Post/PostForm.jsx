@@ -21,6 +21,9 @@ function PostForm({setNewPost}) {
       formData.append("post[photo]", photoFile);
     }
   }
+  for (let i = 0; i < imageFiles.length; i++) {
+    formData.append("post[images][]", imageFiles[i]);
+  }
 
   const response = await fetch("/api/posts", {
         method: "POST",
