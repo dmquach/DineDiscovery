@@ -44,6 +44,13 @@ function PostForm({setNewPost}) {
       }
     };
 
+    const handleFiles = ({ currentTarget }) => {
+      const files = currentTarget.files;
+
+      setImageFiles(files);
+
+      } else setImageUrls([]);
+    };
     let preview = null;
     if (photoUrl) preview = <img src={photoUrl} alt="" />;
   return (
