@@ -34,8 +34,14 @@ function PostForm({setNewPost}) {
         setTitle("");
         setPhotoFile(null);
         setNewPost(post);
+
+        setTitle("");
+
+        setImageFiles([]);
+        setImageUrls([]);
+      } else {
+        setTitle(imageUrls)
       }
-      setTitle("");
     };
 
   return (
