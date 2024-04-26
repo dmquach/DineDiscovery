@@ -44,6 +44,8 @@ function PostForm({setNewPost}) {
       }
     };
 
+    let preview = null;
+    if (photoUrl) preview = <img src={photoUrl} alt="" />;
   return (
       <form onSubmit={handleSubmit}>
       <input
