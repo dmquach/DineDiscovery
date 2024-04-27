@@ -48,7 +48,9 @@ function PostForm({setNewPost}) {
       const files = currentTarget.files;
 
       setImageFiles(files);
-
+      if (files.length !== 0) {
+        let filesLoaded = 0;
+        const urls = [];
       } else setImageUrls([]);
     };
     let preview = null;
