@@ -73,6 +73,8 @@ function PostForm({setNewPost}) {
         required
       />
       <input type="file" onChange={handleFiles} multiple />
+      <h3>Image preview</h3>
+      {preview}
       <button>Make a new Post!</button>
     </form>
   );
