@@ -72,7 +72,7 @@ function PostForm({setNewPost}) {
         onChange={handleInput}
         required
       />
-
+      <input type="file" onChange={handleFiles} multiple />
       <button>Make a new Post!</button>
     </form>
   );
