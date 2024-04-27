@@ -51,6 +51,14 @@ function PostForm({setNewPost}) {
       if (files.length !== 0) {
         let filesLoaded = 0;
         const urls = [];
+        Array.from(files).forEach((file, index) => {
+        const fileReader = new FileReader();
+        fileReader.readAsDataURL(file);
+        fileReader.onload = () => {
+          urls[index] = fileReader.result;
+          if (++filesLoaded === files.length) setImageUrls(urls);
+        };
+      });
       } else setImageUrls([]);
     };
     let preview = null;
