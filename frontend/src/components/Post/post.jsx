@@ -22,6 +22,7 @@ function Post() {
     <>
       <h1>Page</h1>
       <PostForm setNewPost ={setNewPost}/>
+      <PostIndex posts={posts} />
     </>
   );
 }
