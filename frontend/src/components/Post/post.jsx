@@ -1,3 +1,7 @@
+import { useState, useEffect } from "react";
+import PostIndex from "./PostIndex";
+import PostForm from "./PostForm";
+
 function Post() {
   const [newPost, setNewPost] = useState(null);
   const [posts, setPosts] = useState([]);
@@ -17,7 +21,7 @@ function Post() {
   return (
     <>
       <h1>Page</h1>
-
+      <PostForm setNewPost ={setNewPost}/>
     </>
   );
 }
