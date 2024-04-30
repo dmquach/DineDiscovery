@@ -20,7 +20,6 @@ function PostForm({setNewPost}) {
     if (photoFile) {
       formData.append("post[photo]", photoFile);
     }
-  }
   for (let i = 0; i < imageFiles.length; i++) {
     formData.append("post[images][]", imageFiles[i]);
   }
