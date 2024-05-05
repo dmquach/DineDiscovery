@@ -34,3 +34,12 @@ import './index.css';
       </Provider>
     </React.StrictMode>
   );
+
+  if (
+    sessionStorage.getItem("currentUser") === null ||
+    sessionStorage.getItem("X-CSRF-Token") === null
+  ) {
+    store.dispatch(sessionActions.restoreSession()).then(renderApplication);
+  } else {
+    renderApplication();
+  }
