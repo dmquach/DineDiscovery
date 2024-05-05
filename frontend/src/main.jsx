@@ -35,6 +35,15 @@ import './index.css';
     </React.StrictMode>
   );
 
+  const renderApplication = () => {
+    ReactDOM.render(
+      <React.StrictMode>
+        <Root />
+      </React.StrictMode>,
+      document.getElementById("root")
+    );
+  };
+  
   if (
     sessionStorage.getItem("currentUser") === null ||
     sessionStorage.getItem("X-CSRF-Token") === null
