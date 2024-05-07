@@ -1,9 +1,10 @@
+import "./loading.css"
 const Loading =()=>{
     // debugger
     return (
-      <div>
+      <div className="loadingScreen">
         <h1>Loading!</h1>
-        <div>
+        <div className="lds-spinner">
           <div></div>
           <div></div>
           <div></div>
