@@ -9,4 +9,8 @@ export const handleSinglePhotoSubmit = async (e) => {
     method: "POST",
     body: formData,
   });
+  if (response.ok) {
+    const post = await response.json();
+    setPhotoFile(null);
+  }
 };
