@@ -5,5 +5,8 @@ export const handleSinglePhotoSubmit = async (e) => {
   if (photoFile) {
     formData.append("post[photo]", photoFile);
   }
-
+  const response = await fetch("/api/posts", {
+    method: "POST",
+    body: formData,
+  });
 };
