@@ -11,6 +11,9 @@ export const handleSinglePhotoSubmit = async (e) => {
   });
   if (response.ok) {
     const post = await response.json();
+    setTitle("");
     setPhotoFile(null);
+    setNewPost(post);
   }
+  setTitle("");
 };
