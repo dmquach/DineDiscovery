@@ -17,3 +17,8 @@ export const handleSinglePhotoSubmit = async (e) => {
   }
   setTitle("");
 };
+
+export const handleSingleFile = ({ currentTarget }) => {
+  const file = currentTarget.files[0];
+  setPhotoFile(file);
+};
