@@ -1,4 +1,4 @@
-
+import "./NotFound.css"
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 const NotFound =()=>{
     return (
