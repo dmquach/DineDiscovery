@@ -10,6 +10,7 @@ const NotFound =()=>{
             search
           </Link>
         </div>
+        <img src="https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_design_cdn/1c54cc25ce01/assets/img/svg_illustrations/cant_find_650x520_v2.svg" alt="" />
       </div>
     );
 }
