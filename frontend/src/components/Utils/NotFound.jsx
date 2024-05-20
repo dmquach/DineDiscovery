@@ -6,7 +6,7 @@ const NotFound =()=>{
         <div>
           <h1>We’re sorry. We can’t find the page you’re looking for.</h1>
           <h2>Please try a new </h2>
-          <Link to="/">
+          <Link className="signupLink" to="/">
             search
           </Link>
         </div>
