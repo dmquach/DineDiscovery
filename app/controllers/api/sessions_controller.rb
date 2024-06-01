@@ -3,14 +3,13 @@ class Api::SessionsController < ApplicationController
   before_action :require_logged_out, only: :create
 
   def show
-    @user = current_user
-    if @user
-      render 'api/users/info'
+    if current_user
+      @user = current_user
+      render "api/users/profile"
     else
       render json: { user: nil }
     end
   end
-
   def create
     username = params[:username]
     password = params[:password]
