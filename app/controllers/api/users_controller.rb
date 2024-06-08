@@ -6,11 +6,9 @@ class Api::UsersController < ApplicationController
     @user.first_name = params[:user][:first_name].capitalize()
     @user.last_name = params[:user][:last_name].capitalize()
     @user.zip_code = params[:user][:zip_code]
-    if @user.save
-      login!(@user)
-      render :info
-    else
-      render json: @user.errors, status: 422
+    if params[:user][:avatar].present?
+      image = params[:user][:avatar]
+      @user.avatar.attach(io: image.tempfile, filename: image.original_filename)
     end
   end
 
