@@ -28,10 +28,6 @@ class Api::UsersController < ApplicationController
     render :info
   end
 
-
-  def update
-  end
-
   private
 
   def user_params
