@@ -18,10 +18,16 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def index
+    @users = User.all.includes(:reviews)
+    render :index
+  end
+
   def show
     @user = User.find(params[:id])
     render :info
   end
+
 
   def update
   end
