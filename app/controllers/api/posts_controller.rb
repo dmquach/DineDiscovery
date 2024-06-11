@@ -8,9 +8,13 @@ class Api::PostsController < ActionController::API
   def create
     post = Post.new(post_params)
     if post.save
-      render partial: "api/posts", locals: { post: post }
+      render partial: "api/posts/post", locals: { post: post }
     else
-      render json: post.errors, status: 422
+      render json: post.errors.full_messages, status: 422
     end
+  end
+
+  def show
+    @post = Post.find(params[:id])
   end
 end
