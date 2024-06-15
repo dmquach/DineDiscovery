@@ -17,4 +17,10 @@ class Api::PostsController < ActionController::API
   def show
     @post = Post.find(params[:id])
   end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, images: [])
+  end
 end
