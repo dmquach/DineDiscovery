@@ -28,6 +28,12 @@ class ApplicationController < ActionController::API
       end
     end
 
+    def require_logged_out
+      if logged_in?
+        render json: { errors: ["Must be logged out"] }, status: 403
+      end
+    end
+
     private
 
     def snake_case_params
