@@ -43,4 +43,11 @@ class ApplicationController < ActionController::API
     def attach_authenticity_token
       headers['X-CSRF-Token'] = masked_authenticity_token(session)
     end
+    def unhandled_error(error)
+      if request.accepts.first.html?
+        raise error
+      else
+        render "api/errors/internal_server_error", status: :internal_server_error
+      end
+    end
 end
