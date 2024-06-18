@@ -43,6 +43,7 @@ class ApplicationController < ActionController::API
     def attach_authenticity_token
       headers['X-CSRF-Token'] = masked_authenticity_token(session)
     end
+    
     def unhandled_error(error)
       if request.accepts.first.html?
         raise error
