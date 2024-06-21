@@ -8,7 +8,11 @@ class Api::ReviewsController < ApplicationController
   end
 
   def create
-
+    @review = Review.new
+    @review.business_id = params[:review][:business_id]
+    @review.user_id = params[:review][:user_id]
+    @review.rating = params[:review][:rating]
+    @review.body = params[:review][:body]
   end
 
 end
