@@ -4,6 +4,11 @@ class Api::ReviewsController < ApplicationController
 
   def index
     @reviews = Review.includes(:user).all
+    render :index
+  end
+
+  def create
+
   end
 
 end
