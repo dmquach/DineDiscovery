@@ -13,6 +13,10 @@ class Api::ReviewsController < ApplicationController
     @review.user_id = params[:review][:user_id]
     @review.rating = params[:review][:rating]
     @review.body = params[:review][:body]
+      if params[:review][:images].present?
+        @review.images.attach(io: image.tempfile, filename: image.original_filename)
+      end
+    end
   end
 
 end
