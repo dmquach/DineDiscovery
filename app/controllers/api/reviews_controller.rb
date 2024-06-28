@@ -25,6 +25,8 @@ class Api::ReviewsController < ApplicationController
     render :latest
   end
 
-  
+  def review_params
+    params.require(:review).permit(:business_id, :user_id, :rating, :body)
+  end
 
 end
