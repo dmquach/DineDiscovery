@@ -18,7 +18,11 @@ class Api::ReviewsController < ApplicationController
         @review.images.attach(io: image.tempfile, filename: image.original_filename)
       end
     end
-    end
+  end
+
+  def latest
+    @reviews = Review.includes(:user, :business)
+    render :latest
   end
 
 end
