@@ -18,6 +18,9 @@ class Api::ReviewsController < ApplicationController
         @review.images.attach(io: image.tempfile, filename: image.original_filename)
       end
     end
+    if @review.save
+      render :create
+    end
   end
 
   def latest
