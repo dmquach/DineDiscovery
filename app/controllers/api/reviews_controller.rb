@@ -19,7 +19,10 @@ class Api::ReviewsController < ApplicationController
       end
     end
     if @review.save
+      @review.business.update_average_rating
       render :create
+    else
+      render json: @review.errors.full_messages, status: 422
     end
   end
 
