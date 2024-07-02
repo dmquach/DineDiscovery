@@ -31,6 +31,11 @@ class Api::ReviewsController < ApplicationController
     render :show
   end
 
+  def update
+    @review = Review.find(params[:id])
+    render json: @review
+  end
+
   def latest
     @reviews = Review.includes(:user, :business).order(created_at: :desc).limit(8)
     render :latest
