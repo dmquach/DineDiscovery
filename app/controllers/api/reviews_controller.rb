@@ -26,6 +26,10 @@ class Api::ReviewsController < ApplicationController
     end
   end
 
+  def show
+    @review = Review.find(params[:id])
+  end
+
   def latest
     @reviews = Review.includes(:user, :business).order(created_at: :desc).limit(8)
     render :latest
