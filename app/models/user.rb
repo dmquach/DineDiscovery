@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    before_validation :ensure_session_token
     has_secure_password
 
     validates :email,
