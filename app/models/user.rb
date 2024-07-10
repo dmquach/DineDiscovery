@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
     validates :email,
       uniqueness: true,
-      length: { in: 3..100 },
+      length: { in: 3..50 },
       format: { with: URI::MailTo::EMAIL_REGEXP }
     validates :first_name, presence: true, length: { in: 2..40 }
     validates :last_name, presence: true, length: { in: 2..40 }
@@ -13,6 +13,10 @@ class User < ApplicationRecord
 
     validates :session_token, presence: true, uniqueness: true
     validates :password, length: { in: 6..40 }, allow_nil: true
+    has_many :businesses,
+          class_name: :Business,
+          foreign_key: :user_id,
+          dependent: :destroy
 
     before_validation :ensure_session_token
 
