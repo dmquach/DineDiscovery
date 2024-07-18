@@ -1,5 +1,9 @@
 class Business < ApplicationRecord
   validates :name, presence: true
+  validates :city, presence: true
+  validates :state, presence: true, length: { is: 2 }
+  validates :price_range, presence: true
+  validates :category, presence: true
 
   belongs_to :owner,
              class_name: :User,
