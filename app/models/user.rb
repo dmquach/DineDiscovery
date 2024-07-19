@@ -18,6 +18,11 @@ class User < ApplicationRecord
           foreign_key: :user_id,
           dependent: :destroy
 
+    has_many :reviews,
+          class_name: :Review,
+          foreign_key: :user_id,
+          dependent: :destroy
+
     before_validation :ensure_session_token
 
     def self.find_by_credentials(credential, password)
