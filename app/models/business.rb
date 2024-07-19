@@ -16,6 +16,11 @@ class Business < ApplicationRecord
              foreign_key: :business_id,
              dependent: :destroy
 
+  has_many :reviewers,
+             through: :reviews,
+             source: :user,
+             dependent: :destroy
+
   def update_average_rating
     reviewers_count = reviewers.count
     return update(rating: 0) if reviewers_count.zero?
