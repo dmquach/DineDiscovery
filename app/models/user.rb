@@ -2,6 +2,8 @@ class User < ApplicationRecord
     before_validation :ensure_session_token
     has_secure_password
 
+    before_validation :ensure_session_token
+
     validates :email,
       uniqueness: true,
       length: { in: 3..50 },
@@ -22,8 +24,7 @@ class User < ApplicationRecord
           class_name: :Review,
           foreign_key: :user_id,
           dependent: :destroy
-
-    before_validation :ensure_session_token
+    has_one_attached :avatar
 
     def self.find_by_credentials(credential, password)
       field = credential =~ URI::MailTo::EMAIL_REGEXP ? :email : :username
