@@ -15,6 +15,7 @@ class Post < ApplicationRecord
 
     def generate_default_pic
     unless self.photo.attached?
+      file = URI.open("https://dine-discover-seeds.s3.amazonaws.com/default.jpg")
       self.photo.attach(io: file, filename: "default.jpg")
     end
   end
