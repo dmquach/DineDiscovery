@@ -13,4 +13,9 @@ class Post < ApplicationRecord
     end
   end
 
+    def generate_default_pic
+    unless self.photo.attached?
+      self.photo.attach(io: file, filename: "default.jpg")
+    end
+  end
 end
