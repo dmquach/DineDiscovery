@@ -21,6 +21,8 @@ class Business < ApplicationRecord
              source: :user,
              dependent: :destroy
 
+  has_one_attached :photo
+
   def update_average_rating
     reviewers_count = reviewers.count
     return update(rating: 0) if reviewers_count.zero?
