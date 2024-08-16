@@ -3,5 +3,9 @@
     json.id review.id
     json.rating review.rating
     json.business_id review.business.id
+    json.business_name review.business.name
+    json.user_id review.user.id
+    json.body review.body
+    json.photo review.photo.url
   end
 end
