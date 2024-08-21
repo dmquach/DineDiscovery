@@ -8,6 +8,7 @@
     json.body review.body
     json.photo review.photo.url
     json.imageUrls review.images.map { |file| file.url }
-    json.extract! review.user, :first_name
+    json.extract! review.user, :first_name, :last_name
+    json.userAvatar review.user.avatar.url
   end
 end
