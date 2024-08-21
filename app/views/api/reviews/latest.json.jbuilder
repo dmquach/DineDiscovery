@@ -7,5 +7,7 @@
     json.user_id review.user.id
     json.body review.body
     json.photo review.photo.url
+    json.imageUrls review.images.map { |file| file.url }
+    json.extract! review.user, :first_name
   end
 end
