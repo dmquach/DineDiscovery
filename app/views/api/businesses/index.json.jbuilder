@@ -9,5 +9,6 @@
     json.priceRange business.price_range
     json.category business.category
     json.reviews business.reviews.map(&:id)
+    json.photo business.photo.url
   end
 end
