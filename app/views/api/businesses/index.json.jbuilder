@@ -4,5 +4,10 @@
     json.name business.name
     json.city business.city
     json.state business.state
+    json.zipCode business.zip_code
+    json.phoneNumber business.phone_number
+    json.priceRange business.price_range
+    json.category business.category
+    json.reviews business.reviews.map(&:id)
   end
 end
