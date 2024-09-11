@@ -7,3 +7,9 @@ json.business do
     end
   end
 end
+
+json.reviews do
+  @businesses.each do |business|
+  
+  end
+end
