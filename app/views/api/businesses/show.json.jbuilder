@@ -7,3 +7,9 @@ json.business do
     end
   end
 end
+
+json.reviews do
+  json.set! business.id do
+    json.extract! review, :id, :body, :rating
+  end
+end
