@@ -9,8 +9,10 @@ json.business do
 end
 
 json.reviews do
-  json.set! business.id do
-    json.user_id review.user.id
-    json.extract! review, :id, :body, :rating
+  @business.reviews.each do |review|
+    json.set! review.id.to_s do
+      json.user_id review.user.id
+      json.extract! review, :id, :body, :rating
+    end
   end
 end
