@@ -14,6 +14,7 @@ json.reviews do
     json.set! review.id.to_s do
       json.user_id review.user.id
       json.extract! review, :id, :body, :rating
+      json.imageUrls review.images.map { |file| file.url }
       if review.user.avatar.present?
         json.avatar_url review.user.avatar.url
       else
