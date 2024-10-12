@@ -8,5 +8,7 @@
     json.phone_number business.phone_number
     json.price_range business.price_range
     json.category business.category
+    json.lng business.lng
+    json.lat business.lat
   end
 end
