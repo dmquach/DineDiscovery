@@ -10,5 +10,6 @@
     json.category business.category
     json.lng business.lng
     json.lat business.lat
+    json.photo business.photo.url
   end
 end
