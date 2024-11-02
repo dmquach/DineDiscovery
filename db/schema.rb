@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
     t.string "name", null: false
     t.string "record_type", null: false
     t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
   end
 
   create_table "users", force: :cascade do |t|
