@@ -24,6 +24,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
+  create_table "active_storage_blobs", force: :cascade do |t|
+
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "first_name", null: false
