@@ -31,6 +31,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
     t.text "metadata"
     t.string "service_name", null: false
     t.bigint "byte_size", null: false
+    t.string "checksum"
   end
 
   create_table "users", force: :cascade do |t|
