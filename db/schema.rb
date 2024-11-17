@@ -33,6 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
     t.bigint "byte_size", null: false
     t.string "checksum"
     t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
   create_table "users", force: :cascade do |t|
