@@ -56,4 +56,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+
 end
