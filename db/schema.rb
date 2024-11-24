@@ -37,7 +37,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
   end
 
   create_table "active_storage_variant_records", force: :cascade do |t|
-
+    t.bigint "blob_id", null: false
   end
 
   create_table "users", force: :cascade do |t|
