@@ -56,6 +56,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
   end
 
+  create_table "businesses", force: :cascade do |t|
+
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
 end
