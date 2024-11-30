@@ -58,6 +58,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
 
   create_table "businesses", force: :cascade do |t|
     t.string "name", null: false
+    t.string "city", null: false
+    t.string "state", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
