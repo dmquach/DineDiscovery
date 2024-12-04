@@ -62,6 +62,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
     t.string "state", null: false
     t.string "zip_code", null: false
     t.string "phone_number", null: false
+    t.float "price_range", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
