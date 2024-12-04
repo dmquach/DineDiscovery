@@ -67,6 +67,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "rating"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
