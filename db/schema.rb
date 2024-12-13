@@ -72,7 +72,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
     t.float "lng"
   end
 
-  create_table "posts"
+  create_table "posts", force: :cascade do |t|
 
   end
 
