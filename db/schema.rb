@@ -72,6 +72,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
     t.float "lng"
   end
 
+  create_table "posts"
+
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
 end
