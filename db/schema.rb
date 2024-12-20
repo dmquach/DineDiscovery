@@ -81,7 +81,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
   end
 
   create_table "reviews", force: :cascade do |t|
-
+    t.text "body", null: false
   end
 
 
