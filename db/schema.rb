@@ -70,6 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
     t.float "rating"
     t.float "lat"
     t.float "lng"
+    t.index ["rating"], name: "index_businesses_on_rating"
     t.index ["user_id"], name: "index_businesses_on_user_id"
   end
 
