@@ -87,6 +87,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["business_id", "user_id"], name: "index_reviews_on_business_id_and_user_id", unique: true
   end
 
 
