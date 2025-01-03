@@ -84,6 +84,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
     t.text "body", null: false
     t.integer "rating", null: false
     t.bigint "business_id", null: false
+    t.bigint "user_id", null: false
   end
 
 
