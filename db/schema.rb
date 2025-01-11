@@ -89,6 +89,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
     t.datetime "updated_at", null: false
     t.index ["business_id", "user_id"], name: "index_reviews_on_business_id_and_user_id", unique: true
     t.index ["business_id"], name: "index_reviews_on_business_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
 
