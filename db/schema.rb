@@ -97,4 +97,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_220912) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "businesses", "users"
   add_foreign_key "reviews", "businesses"
+  add_foreign_key "reviews", "users"
 end
