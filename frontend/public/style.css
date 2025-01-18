@@ -93,3 +93,9 @@ video {
     vertical-align: baseline;
     box-sizing: border-box;
 }
+
+#root{
+    height:100%;
+    width:100%;
+
+}
